@@ -1,0 +1,115 @@
+<html lang="ru">
+    <head>
+        <title>Tabulation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            /*Old*/
+            .example_1 .tab{
+                width: 400px;
+                padding: 0; margin: 0;
+            }
+                .example_1 .tab__row{
+                    position: relative;
+                    height: 40px;
+                    background: url(dot.png) repeat-x left bottom 15px #d0d0d0;
+                    line-height: 40px;
+                    list-style: none;
+                    z-index: 0;
+                }
+                    .example_1 .tab__row:nth-child(2n),
+                    .example_1 .tab__row:nth-child(2n) .tab__col{
+                        background-color: #fff;
+                    }
+                        .example_1 .tab__col{
+                            float: left;
+                            height: 40px;
+                            background: #d0d0d0;
+                        }
+                            .example_1 .tab__page{
+                                float: right;
+                                text-align: right;
+                            }
+
+            /*New*/
+            .example_2 .tab{
+                width: 400px;
+                padding: 0; margin: 0;
+            }
+                .example_2 .tab__row{
+                    position: relative;
+                    height: 40px;
+                    background: #d0d0d0;
+                    line-height: 40px;
+                    list-style: none;
+                    z-index: 0;
+                }
+                    .example_2 .tab__row:after{
+                        content: "..............................................................................................";
+                        position: absolute;
+                        top: 0;left: 0;
+                        height: 40px;
+                        z-index: -1;
+                    }
+                    .example_2 .tab__row:nth-child(2n),
+                    .example_2 .tab__row:nth-child(2n) .tab__col{
+                        background: #fff;
+                    }
+                        .example_2 .tab__col{
+                            float: left;
+                            height: 40px;
+                            background: #d0d0d0;
+                        }
+                            .example_2 .tab__page{
+                                float: right;
+                                text-align: right;
+                            }
+
+        </style>
+    </head>
+    <body>
+        <div class="example_1">
+            <ul class="tab">
+                <li class="tab__row">
+                    <div class="tab__col">Это заголовок</div>
+                    <div class="tab__col tab__page">с. 53</div>
+                </li>
+                <li class="tab__row">
+                    <div class="tab__col">Это заголовок</div>
+                    <div class="tab__col tab__page">с. 53</div>
+                </li>
+                <li class="tab__row">
+                    <div class="tab__col">Это заголовок</div>
+                    <div class="tab__col tab__page">с. 53</div>
+                </li>
+                <li class="tab__row">
+                    <div class="tab__col">Это заголовок</div>
+                    <div class="tab__col tab__page">с. 53</div>
+                </li>
+            </ul>
+        </div>
+        <br />
+        <div class="example_2">
+            <ul class="tab">
+                <li class="tab__row">
+                    <div class="tab__col">Это заголовок</div>
+                    <div class="tab__col tab__page">с. 53</div>
+                </li>
+                <li class="tab__row">
+                    <div class="tab__col">Это заголовок</div>
+                    <div class="tab__col tab__page">с. 53</div>
+                </li>
+                <li class="tab__row">
+                    <div class="tab__col">Это заголовок</div>
+                    <div class="tab__col tab__page">с. 53</div>
+                </li>
+                <li class="tab__row">
+                    <div class="tab__col">Это заголовок</div>
+                    <div class="tab__col tab__page">с. 53</div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
